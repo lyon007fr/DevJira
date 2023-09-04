@@ -85,8 +85,8 @@ msg['Subject'] = "bonjour test"
 
 # Send the message via our own SMTP server.
 #s = smtplib.SMTP("mailhost.fr",25)
-msg['From'] = "noreply@enedis.fr"
-with smtplib.SMTP("mailhost.der.edf.fr",25) as s:
+msg['From'] = "noreply@test.fr"
+with smtplib.SMTP("mailhost.test.com",25) as s:
     print(s.noop())
     s.send_message(msg)
     

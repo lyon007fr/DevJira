@@ -48,7 +48,7 @@ for(i in userList){
     if(canBeUpdated){
         def randomString = RandomStringUtils.random(12, true, true)
         log.info("User à modifier " + userToUpdate)
-		def newData = new ApplicationUserBuilderImpl(userToUpdate).name("user"+randomString).displayName(randomString).emailAddress(randomString + "@enedis.fr").build()
+		def newData = new ApplicationUserBuilderImpl(userToUpdate).name("user"+randomString).displayName(randomString).emailAddress(randomString + "@test.fr").build()
 		UserManager.updateUser(newData)
         log.info("Nouvelles valeurs attribue a l'utilisateur : " + newData)
         def userAvatar = AvatarService.getAvatar(user, userToUpdate)//peut etre null mais la methode issystemAvatar ne fonctionne pas avec des objets null
