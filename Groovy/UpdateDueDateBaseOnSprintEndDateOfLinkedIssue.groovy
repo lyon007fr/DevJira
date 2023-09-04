@@ -13,7 +13,7 @@ import org.joda.time.DateTime
 
 
 
-def issue = ComponentAccessor.getIssueManager().getIssueByCurrentKey("GJA-10376")
+def issue = ComponentAccessor.getIssueManager().getIssueByCurrentKey("ABC-001")
 //methode pour avoir les id d'un issuetype a partir d'un label
 @Field String idTache
 
@@ -71,7 +71,7 @@ log.warn(dateSprint.millisOfSecond().getMillis())
 import com.atlassian.jira.event.type.EventDispatchOption
 import java.sql.Timestamp
 
-def gojiraAdminUser = ComponentAccessor.getUserManager().getUserByName("gojira-admin")
+def gojiraAdminUser = ComponentAccessor.getUserManager().getUserByName("jira-admin")
 def timeStam = new Timestamp(dateSprint.millisOfSecond().getMillis())
 log.warn(timeStam)
 issue.setDueDate(new Timestamp(dateSprint.millisOfSecond().getMillis()))     

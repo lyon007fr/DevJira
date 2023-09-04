@@ -14,7 +14,7 @@ for i in project:
     try:
         issues_in_proj = jira_server.search_issues(f'project = {i.key} ORDER BY updatedDate DESC')
         for j in issues_in_proj[:1]:#get only the first element
-            with open ("C:\\Users\\Mohamed\\Git\\listeProject.csv","a", encoding="UTF-8", newline='') as f:
+            with open ("C:\\Users\\Users\\Git\\listeProject.csv","a", encoding="UTF-8", newline='') as f:
                 writer = csv.writer(f, delimiter =',')
                 data =[i.name +"," + j.fields.updated] 
                 #le module csv attends une liste ou tuple pour les ajouter au csv, 

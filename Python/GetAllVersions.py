@@ -30,12 +30,12 @@ def getAllVersions():
                          listIssue.append(k['name']+"--"+k["id"])
     return listIssue
 
-toto = getAllVersions()
-print(len(toto))
-myset = set(toto)#permet de ne pas avoir de doublon dans la liste
+getVersions = getAllVersions()
+print(len(getVersions))
+myset = set(getVersions)#permet de ne pas avoir de doublon dans la liste
 print(len(myset))
 
-with open("VersionListAML.csv","a+",newline='') as csvfile:
+with open("VersionList.csv","a+",newline='') as csvfile:
      csvwriter = csv.writer(csvfile)
      for i in list(myset):
          litotosting = [i] #la valeur est mis dans une liste pour que python puisse ajouter la valeur dans chaque cellule comme cela "toto" et non pas "t,o,t,o"

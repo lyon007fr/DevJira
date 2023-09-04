@@ -4,10 +4,6 @@ import csv
 import urllib3
 urllib3.disable_warnings() #permet d'enlever les warning liés aux appeles API (sera corrigé en ajoutant le certificat dans l'appel api à la place de "vérify = false")
 
-#r = requests.get('https://jira.fr/rest/api/2/project/GJA/role/10002',auth=('',''),verify=False)
-
-#print(r.json())
-
 
 f = open("C:\\Users\\User\\Desktop\\listProjets.txt","r")
 

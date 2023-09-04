@@ -4,7 +4,7 @@ Script permettant de faire du scrapping afin de récuperer les group et utilisat
 
 """
 
-port requests
+import requests
 import urllib3
 urllib3.disable_warnings() #permet d'enlever les warning liés aux appeles API (sera corrigé en ajoutant le certificat dans l'appel api à la place de "vérify = false")
 from bs4 import BeautifulSoup

@@ -8,10 +8,10 @@ import com.atlassian.jira.component.ComponentAccessor
 import com.atlassian.jira.issue.fields.config.manager.PrioritySchemeManager
 import com.atlassian.jira.event.type.EventDispatchOption
 
-def issue = ComponentAccessor.getIssueManager().getIssueByCurrentKey("GJA-10380")
+def issue = ComponentAccessor.getIssueManager().getIssueByCurrentKey("ABC-10380")
 def issueManager = ComponentAccessor.getIssueManager()
 def astridPriority = ComponentAccessor.getCustomFieldManager().getCustomFieldObjects(issue).find { cf -> cf.name == 'Priorité de 0 (+) à 100 (-)' }
-def gojiraAdminUser = ComponentAccessor.getUserManager().getUserByName("gojira-admin")
+def gojiraAdminUser = ComponentAccessor.getUserManager().getUserByName("jira-admin")
 
 def astridPriorityValue = astridPriority.getValue(issue) as int
 
@@ -21,8 +21,8 @@ def schemePriorityName = priorityScheme.getScheme(project).getName()
 log.warn(schemePriorityName)
 
 //dictionnaire pour mapper les labels des priority scheme avec un ID
-def prioritiesMap = ["PRS_ALL_Default" : 1,"PRS_ALL_MajMin" : 2, "PRS_ALL_Moscow": 3, "PRS_ALL_OptionNonPriorisé" : 4 ,"PRS_ALL_TargetProcess" : 5, 
-"PRS_Edrim_Emap_DefaultBloquante" : 6 , "PRS_GPO_MajMin" : 7 , "PRS_OSE_MajMin" : 8]
+def prioritiesMap = ["Default" : 1,"MajMin" : 2, "Moscow": 3, "OptionNonPriorisé" : 4 ,"TargetProcess" : 5, 
+"DefaultBloquante" : 6 , "MajMin" : 7 , "MajMin" : 8]
 //log.warn(prioritiesMap[schemePriorityName])
 
 //liste de liste contenant la priorité Astrid en index 0 (un range) et les labels des priorités Jira

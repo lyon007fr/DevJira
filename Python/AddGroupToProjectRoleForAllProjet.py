@@ -6,7 +6,7 @@ from tqdm import tqdm
 import getpass
 urllib3.disable_warnings() #permet d'enlever les warning liés aux appeles API (sera corrigé en ajoutant le certificat dans l'appel api à la place de "vérify = false")
 
-base_url = "https://jira.jira.gate.fr"
+base_url = "https://jira.fr"
 login = input("Saisissez votre username jira : ")
 password = getpass.getpass()
 
