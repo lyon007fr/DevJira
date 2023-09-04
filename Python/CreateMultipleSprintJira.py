@@ -7,7 +7,7 @@ urllib3.disable_warnings() #permet d'enlever les warning liés aux appeles API (
 Username = ""
 Password = ""
 
-df = pd.read_excel(PathToExcelDoc,engine = "odf")
+df = pd.read_excel(<PathToExcelDoc>,engine = "odf")
 #print(df.head())
 #print(df.loc[7, "Sprint"])
 proxies = {'https':'http://proxy:331'}

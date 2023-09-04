@@ -27,7 +27,7 @@ def allIssueTypes = constantsManager.getAllIssueTypeObjects()
 
 def linkTypes = getFieldById("issuelinks-linktype")
 if (getActionName() == "Créer" || getActionName() == "Create") {
-    if (issueContext.issueType.name == "Macrofonction" || issueContext.issueType.name == "Macrofonction Enabler" ) {
+    if (issueContext.issueType.name == "fonction" || issueContext.issueType.name == "fonction Enabler" ) {
         //get the outward link names you want
         outwardAllowedLinks = issueLinkTypeManager.getIssueLinkTypes(false).findAll{ it.outward in allowedOutwardTypes }.collectEntries{
             [it.outward,it.outward]

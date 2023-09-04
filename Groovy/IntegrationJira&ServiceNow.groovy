@@ -106,7 +106,7 @@ if(!serviceNowLinkValue){
     issue.setCustomFieldValue(serviceNowLinkCustomfield,newValueForserviceNowLink)
     def newIssue = issueManager.updateIssue(user,issue,EventDispatchOption.DO_NOT_DISPATCH,false)
     if(newIssue){
-        log.warn("Lien serviceNow Update successful")
+        log.warn("Lien serviceNow, Update successful")
     }else {
         log.warn("Unsuccessful update of the Lien serviceNow")
     }

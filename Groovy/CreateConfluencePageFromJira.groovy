@@ -87,7 +87,7 @@ searchService = ComponentAccessor.getComponent(SearchService)
 jiraAdminUser = ComponentAccessor.getUserManager().getUserByName("le compte admin Jira")
 
 // jql query
-def query = jqlQueryParser.parseQuery('project = "<le nom du projet>" and issuetype = "Test Execution" and created >= startOfDay() and status = Terminé')
+def query = jqlQueryParser.parseQuery('project = "<cle nom du projet>" and issuetype = "Test Execution" and created >= startOfDay() and status = Terminé')
 def search = searchService.search(jiraAdminUser, query, PagerFilter.getUnlimitedFilter())
 log.warn("Total issues de la premiere JQL: ${search.total}")
 log.warn(search.getResults().getClass())
@@ -161,7 +161,7 @@ def createHtmlLine(test){
                      <ac:parameter ac:name="columnIds">issuekey,summary,created,reporter,priority,status,assignee,customfield_10107,customfield_10105</ac:parameter>
                      <ac:parameter ac:name="columns">key,summary,created,reporter,priority,status,assignee,Equipe,Sprint</ac:parameter>
                      <ac:parameter ac:name="maximumIssues">100</ac:parameter>
-                     <ac:parameter ac:name="jqlQuery">project = ZSEV2 AND issuetype = Anomalie and &quot;Plateforme(s)&quot; = &quot;POD1&quot; and  issue in linkedIssues(&quot;${i.key}&quot;)  and not  ( created &lt; startOfDay() and status = Termin&eacute;) AND created &lt; startOfDay("+1") order by createdDate </ac:parameter>
+                     <ac:parameter ac:name="jqlQuery">project = ABC AND issuetype = Anomalie and &quot;Plateforme(s)&quot; = &quot;POD1&quot; and  issue in linkedIssues(&quot;${i.key}&quot;)  and not  ( created &lt; startOfDay() and status = Termin&eacute;) AND created &lt; startOfDay("+1") order by createdDate </ac:parameter>
                      <ac:parameter ac:name="serverId">18012623-033d-3aca-8975-57a9151e336c</ac:parameter>
                   </ac:structured-macro>
                </p>
@@ -198,7 +198,7 @@ def createHtmlLine(test){
                      <ac:parameter ac:name="columnIds">issuekey,summary,created,reporter,priority,status,assignee,customfield_10107,customfield_10105</ac:parameter>
                      <ac:parameter ac:name="columns">key,summary,created,reporter,priority,status,assignee,Equipe,Sprint</ac:parameter>
                      <ac:parameter ac:name="maximumIssues">100</ac:parameter>
-                     <ac:parameter ac:name="jqlQuery">project = ZSEV2 AND issuetype = Anomalie and &quot;Plateforme(s)&quot; = &quot;POD1&quot; and  issue in linkedIssues(&quot;${i.key}&quot;)  and not  ( created &lt; startOfDay() and status = Termin&eacute;) AND created &lt; startOfDay("+1") order by createdDate </ac:parameter>
+                     <ac:parameter ac:name="jqlQuery">project = ABC AND issuetype = Anomalie and &quot;Plateforme(s)&quot; = &quot;POD1&quot; and  issue in linkedIssues(&quot;${i.key}&quot;)  and not  ( created &lt; startOfDay() and status = Termin&eacute;) AND created &lt; startOfDay("+1") order by createdDate </ac:parameter>
                      <ac:parameter ac:name="serverId">18012623-033d-3aca-8975-57a9151e336c</ac:parameter>
                   </ac:structured-macro>
                </p>

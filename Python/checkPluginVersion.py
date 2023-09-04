@@ -1,4 +1,3 @@
-from tkinter import E
 import requests
 import urllib3
 urllib3.disable_warnings()
@@ -51,7 +50,7 @@ for i in data['plugins']:
 
 #envoi du mail
 messageBody = """<br>Bonjour,</br> 
-<br>Les plugins suivants de l'instance GoJira IN ont une ou des version(s) d'écart avec la dernière version publiée sur le marketplace d'Atlassian : </br> 
+<br>Les plugins suivants de l'instance Jira ont une ou des version(s) d'écart avec la dernière version publiée sur le marketplace d'Atlassian : </br> 
 <br></br>
 <html><body>
 <table border-collapse = "collapse" border = "1" cellspacing="0" cellpadding = "3" padding = "4">
@@ -80,7 +79,7 @@ finalMessage = messageBody+messageFooter
 print(finalMessage)
 
 msg = EmailMessage()
-msg['To'] = "mohamed.benziane@hotmail.fr"
+msg['To'] = "noreply@hotmail.fr"
 msg['Subject'] = "bonjour test"
 
 # Send the message via our own SMTP server.

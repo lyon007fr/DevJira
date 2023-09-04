@@ -75,11 +75,6 @@ for(i in issueSecurityLevels){
 
 
 
-//On passait par les composants mais plus besoin on passe par un CF qui contient la valeur de la clé du projet target
-//GET Component
-//def componentList = issue.getComponents()
-//componentList.each{component -> log.warn("Component name : "  + component.name)}
-
 def issueResult
 
 //GET projet ID with component name
